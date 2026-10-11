@@ -1269,6 +1269,8 @@ VectorRef CBaseEntity::__API_HOOK(FireBullets3)(VectorRef vecSrc, VectorRef vecD
 {
 	static Vector vecRet;
 
+	vecSpread = 0.0f;
+
 	int iOriginalPenetration = iPenetration;
 	int iPenetrationPower;
 	float flPenetrationDistance;
