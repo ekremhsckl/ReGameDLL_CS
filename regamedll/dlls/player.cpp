@@ -5505,6 +5505,7 @@ pt_end:
 	// Track button info so we can detect 'pressed' and 'released' buttons next frame
 	m_afButtonLast = pev->button;
 	m_iGaitsequence = pev->gaitsequence;
+	pev->punchangle = g_vecZero;
 
 	StudioProcessGait();
 }
