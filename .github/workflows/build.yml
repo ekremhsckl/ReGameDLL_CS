@@ -142,6 +142,7 @@ jobs:
         shell: "pwsh"
 
       - name: Edit resources at windows binaries
+      if: false
         run: |
           rcedit ${{ github.workspace }}\publish\bin\win32\cstrike\dlls\mp.dll --set-version-string ProductName "Regamedll_CS - mp.dll" --set-file-version "${{ steps.get_version.outputs.version }}" --set-product-version "${{ steps.get_version.outputs.version }}" --set-version-string FileDescription "Regamedll_CS (mp.dll) - provide more stable (than official) version of Counter-Strike game with extended API for mods and plugins, Commit: $env:GITHUB_SHA" --set-version-string "Comments" "Regamedll_CS is a result of reverse engineering of original library mod HLDS (build 6153beta) using DWARF debug info embedded into linux version of HLDS, cs.so. Commit: $env:GITHUB_SHA" --set-version-string CompanyName "ReHLDS Dev Team" --set-version-string LegalCopyright "Copyright 2025 Valve, ReHLDS DevTeam" --set-icon regamedll/msvc/icon.ico
         shell: "pwsh"
