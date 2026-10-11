@@ -129,7 +129,7 @@ jobs:
         run: echo "Version is ${{ steps.get_version.outputs.version }}"
 
       - name: Import PFX and sign
-        if: github.event_name != 'pull_request'
+        if: false
         env:
           KEY_PFX_PASS: ${{ secrets.KEY_PFX_PASS }}
         # https://github.com/actions/runner-images/blob/main/images/windows/Windows2025-Readme.md
@@ -404,4 +404,3 @@ jobs:
             *.asc
         env:
           GITHUB_TOKEN: ${{ secrets.API_TOKEN }}
-
